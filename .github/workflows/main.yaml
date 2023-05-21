@@ -24,7 +24,7 @@ jobs:
         run: docker run -e CI=true mayankgupta804/react-test npm test
 
       - name: Build docker image for prod
-        run: docker build -t mayankgupta804/react Dockerfile .
+        run: docker build -t mayankgupta804/react .
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
