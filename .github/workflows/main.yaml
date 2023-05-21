@@ -23,9 +23,6 @@ jobs:
       - name: Run tests
         run: docker run -e CI=true mayankgupta804/react-test npm test
 
-      - name: Build docker image for prod
-        run: docker build -t mayankgupta804/react .
-
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
 
@@ -36,7 +33,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: react-frontend
           environment_name: React-frontend-env
-          bucket_name: elasticbeanstalk-us-east-2-336168347913
+          existing_bucket_name: elasticbeanstalk-us-east-2-336168347913
           bucket_path: react-frontend
           region: us-east-2
           version_label: ${{ github.sha }}
