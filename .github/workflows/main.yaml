@@ -15,7 +15,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build docker image
-        run: docker build -t mayankgupta804/react-test -f Dockerfile.dev .
+        run: docker build -t mayankgupta804/react-test -f Dockerfile.dev ../../.
 
       - name: Run tests
         # uses: actions/checkout@v3
