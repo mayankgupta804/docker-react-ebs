@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: react-frontend
-          environment_name: React-frontend-env
+          application_name: ebs-docker-react
+          environment_name: Ebs-docker-react-env
           region: us-east-2
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
