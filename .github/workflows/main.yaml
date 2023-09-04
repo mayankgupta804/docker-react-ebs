@@ -31,8 +31,9 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          environment_name: ebs-docker-react
-          application_name: Ebs-docker-react-env
+          application_name: ebs-docker-react
+          existing_bucket_name: elasticbeanstalk-us-east-2-336168347913
+          environment_name: Ebs-docker-react-env
           region: us-east-2
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
